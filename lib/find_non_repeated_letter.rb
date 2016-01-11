@@ -10,4 +10,5 @@
 
 def find_first_non_repeated_letter(str)
   #write your method here
+  return true
 end
