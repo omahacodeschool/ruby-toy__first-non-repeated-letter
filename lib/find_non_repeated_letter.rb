@@ -10,7 +10,7 @@
 
 def find_first_non_repeated_letter(str)
     ary = str.split("")
-    ary.select { |e| ary.count(e) == 1 }.uniq.first
+    ary.detect { |e| ary.count(e) == 1 }
 end
 
 =begin
