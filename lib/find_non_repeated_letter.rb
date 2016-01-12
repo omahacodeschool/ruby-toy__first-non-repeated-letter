@@ -9,5 +9,18 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
+    ary = str.chars
+    x = 0
+    
+    while x <= ary.length
+        if ary.length <= 1
+            return ary[x]
+        elsif ary[x] == ary[x + 1] || ary[x + 1] == ary[x + 2]
+            x += 1
+        else 
+            return ary[x + 1]
+        end
+    end
 end
+#I know there has to be an simpler way to do this but I wanted to find a solution without being too specific in my research for more of a challange.
+#My first attempt, I realized, didn't work for arrays with a single element, so I modified it.

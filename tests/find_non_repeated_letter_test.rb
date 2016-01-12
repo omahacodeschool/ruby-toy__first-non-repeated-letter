@@ -17,7 +17,7 @@ class FindNonRepeatedLetterTest < Minitest::Test
   def test_with_two_unique
     string = "aabccd"
     result = find_first_non_repeated_letter(string)
-    assert_equal("c", result)
+    assert_equal("b", result)
   end
 
   def test_with_no_unique
