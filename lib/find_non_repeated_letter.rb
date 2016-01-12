@@ -9,5 +9,12 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
+    ary = str.split("")
+    ary.select { |e| ary.count(e) == 1 }.uniq.first
 end
+
+=begin
+As per your email, I am submitting this even though it's failing the test_with_two_unique test.
+I worked on this one for quite awhile. I'm finding again and again that these solutions end up looking pretty neat and even terse by the time I'm
+done. That's the cool thing about Ruby (and probably most other languages), there's a method out there for just about everything you could want to do.
+=end
