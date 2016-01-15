@@ -8,7 +8,19 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
+def how_many_times_is_repeated(str)
+  arr = str.split("")
+  arr.each do |n|
+    if h.has_key?(n) == false
+      h[n]=1
+    elsif h.has_key?(n) == true
+      h[n]= h[n] +1
+    end
+end
+
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+    a = how_many_times_is_repeated(str)
+    #next line should create an array that stores the hash keys with a value of '1' from the hash created by the 'how many times is repeated' method
+    b = [a.hash.index(1)]
+    returns b(0)
 end
