@@ -22,8 +22,8 @@ def how_many_times_is_repeated(str)
       h[n]= h[n] +1
     end
     #return the completed hash
-    return h
   end
+      return h
 end
 
 def find_first_non_repeated_letter(str)
