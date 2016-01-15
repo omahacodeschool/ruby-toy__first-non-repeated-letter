@@ -10,13 +10,10 @@
 
 def find_first_non_repeated_letter(str)
   array = str.split(//)
-  counts = Hash.new 0  #creates new hash 
-
+  counts = Hash.new 0  
   array.each do |x|
-    counts[x] += 1   #count the characters in array and put in hash with key = letter and value= the character's frequency
-end
-counts.delete_if{|key, value| value >= 2} #delete key, value pair if it occurs more than once
-counts.keys[0]
-
+    counts[x] += 1  
+  end
+  counts.delete_if{|key, value| value >= 2}
 end
 
