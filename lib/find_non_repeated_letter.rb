@@ -23,6 +23,7 @@ def how_many_times_is_repeated(str)
     end
     #return the completed hash
     return h
+  end
 end
 
 def find_first_non_repeated_letter(str)
@@ -31,5 +32,5 @@ def find_first_non_repeated_letter(str)
     #return the first hash hey with a value of '1' from the hash created by the 'how many times is repeated' method
     #first_non_repeat = h.index(1)
     #return first_non_repeat
-    return h.index(1)
+    return h.key(1)
 end
