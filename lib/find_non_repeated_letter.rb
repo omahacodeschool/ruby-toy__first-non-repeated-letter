@@ -8,6 +8,20 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
-def find_first_non_repeated_letter(str)
-  #write your method here
+def find_first_non_repeated_letter (str)
+  n = Hash.new(0)
+  return_array = []
+  str.split(//).each do |i|
+    n[i] += 1
+  end
+  
+  n.each_pair { |k,v| 
+    if v == 1
+      return_array << k
+    end
+  }
+  
+  return return_array [0]
 end
+
+#(I recycled some of my code from the last exercise here. It seems to solve the problem nicely!)
