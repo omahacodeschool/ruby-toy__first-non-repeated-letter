@@ -14,21 +14,18 @@ def find_first_non_repeated_letter(str)
   
   final = array.length - 1
   
-  answer = ""
-  
-  array.each_index do |i|
-    if i == 0 && array[i] != array[(i+1)]
-      answer = array[i]
-      break
-    elsif i == final && array[i] != array[(i-1)]
-      answer = array[i]
-      break
-    elsif array[i] != array[(i-1)] && array[i] != array[(i+1)]
-      answer = array [i]
-      break
-    else
-      answer = nil
-    end 
+  if array[0] != array[1]
+    answer = array[0]
+  else for i in 1..(final-1)
+      if array[i] != array[(i-1)] && array[i] != array[(i+1)]
+        answer = array[i]
+        break
+      elsif array[final] != array[(final-1)]
+        answer = array[final]
+      else 
+        answer = nil
+      end
+    end
   end
   
   return answer
