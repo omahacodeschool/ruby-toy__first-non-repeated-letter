@@ -9,5 +9,42 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
+is_front_repeat = false
+is_back_repeat = false
+for i in 0...str.length
+  if i > 0 
+    if str[i] != str[i+1]
+        is_front_repeat = false
+        if str[i] != str[i-1]
+            is_back_repeat = false
+            break
+        else
+            is_back_repeat = true
+        end
+    else
+      is_front_repeat = true
+      end
+  elsif i == 0
+      if str[i] != str[i+1]
+        is_front_repeat = false
+        is_back_repeat = false
+        break
+      else
+        is_front_repeat = true
+        is_back_repeat = false
+      end    
+  else
+      is_front_repeat = true
+      is_back_repeat = true
+  end 
 end
+if  is_back_repeat
+  return nil
+elsif is_front_repeat
+  return nil
+else
+  return str[i]
+end
+    
+end
+   
