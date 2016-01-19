@@ -8,7 +8,7 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
-#I'm I thinking about this correctly?
+#Am I thinking about this correctly?
 
 def find_first_non_repeated_letter(str)
     str = str.chars
