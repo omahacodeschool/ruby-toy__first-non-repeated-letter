@@ -8,7 +8,14 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
-def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+def find_non_repeated_letter(str)
+    repeated = []
+    ray = str.split(//)
+until ray.empty?
+    repeated << ray.uniq.pop
+  end
 end
+find_non_repeated_letter("aaabbbcddd")
+#I am trying to use the .uniq command to 'pop' all the repeated letters into an empty array
+#then I want to somehow cross reference this list of letters with the original string, and somehow delete
+#the letters that appear in both
