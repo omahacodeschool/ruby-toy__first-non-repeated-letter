@@ -9,6 +9,8 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  ary = str.split("")
+  ary.each.detect { |letter| ary.count(letter) == 1 }
 end
+
+find_first_non_repeated_letter("aabbccde")
