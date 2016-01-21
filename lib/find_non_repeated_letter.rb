@@ -8,11 +8,11 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
-def find_non_repeated_letter(str)
+def find_first_non_repeated_letter(str)
     stingray = str.split(//)
     stingray.detect{ |i| stingray.count(i) == 1 }
 end
-find_non_repeated_letter("aaabbbcddd")
+find_first_non_repeated_letter("aaabbbcddd")
 #I spent a lot of time trying to find a method to find and delete duplicate characters, and
 #in reading about enumerators, I set up a loop using detect/find to search for characters that
 #appear more than once in a string, then I thought about the original objective, and instead
