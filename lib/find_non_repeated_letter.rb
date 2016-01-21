@@ -9,13 +9,13 @@
 
 
 def find_non_repeated_letter(str)
-    repeated = []
-    ray = str.split(//)
-until ray.empty?
-    repeated << ray.uniq.pop
-  end
+    stingray = str.split(//)
+    stingray.detect{ |i| stingray.count(i) == 1 }
 end
 find_non_repeated_letter("aaabbbcddd")
-#I am trying to use the .uniq command to 'pop' all the repeated letters into an empty array
-#then I want to somehow cross reference this list of letters with the original string, and somehow delete
-#the letters that appear in both
+#I spent a lot of time trying to find a method to find and delete duplicate characters, and
+#in reading about enumerators, I set up a loop using detect/find to search for characters that
+#appear more than once in a string, then I thought about the original objective, and instead
+#of searching for characters that appear more than once, this looks for an instance that only
+#occurs once, which happneds to be the first one, and displays it, if there arent any single 
+#instance characters, it returns nil
