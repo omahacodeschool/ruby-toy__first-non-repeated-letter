@@ -8,14 +8,11 @@
 #   nil (since there does not exist a non-repeated letter)
 
 
+def find_first_non_repeated_letter(str)
+  str = str.chars
+  new_str = str.select { |char| str.count(char) <= 1 }
+  return new_str[0]
+end
 
-#update: going down this path now. gotta put in a conditional and break the loop once the first non-repeating letter is found.
-
-def find_first_non_repeated_letter(str) 
-   str = str.chars
-   str.select { |char| str.count(char) <= 1 }
-
-
-end true
 
 
