@@ -9,13 +9,19 @@
 
 
 def find_first_non_repeated_letter(str)
-    a = str
-    arr = a.split("")
-    counts = Hash.new(0)
-    arr.each do |x|
-        counts[x] += 1
+    a = str #Interestingly, the solution for this matched up fairly closely with
+            #the one I came up with for the most common integer problem.  This 
+            #sets the a variable equal to whatever string is passed as argument.
+    arr = a.split("") #This converts that string to an array.
+    counts = Hash.new(0) #This creates an empty hash named "counts".
+    arr.each do |x| #This uses an each loop to loop through the array.
+        counts[x] += 1 #As it's looping through the array, it counts the instances
+                       #of particular items, i,e, it counts the number of times a
+                       #value is repeated. It also maintains the order that they 
+                       #appear in in the hash.
     end
-    counts.key(1)
+    counts.key(1) #This coughs up the first instance in the "counts" hash that occurs
+                  #only once, which is what we were looking for.
 end
 find_first_non_repeated_letter(aabccd)
 
