@@ -9,5 +9,13 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
+    a = str
+    arr = a.split("")
+    counts = Hash.new(0)
+    arr.each do |x|
+        counts[x] += 1
+    end
+    counts.key(1)
 end
+find_first_non_repeated_letter(aabccd)
+
