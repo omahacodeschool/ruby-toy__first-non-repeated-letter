@@ -9,17 +9,18 @@
 
 
 def find_first_non_repeated_letter(str)
-    new_array=[]
-    new_array=str.split""
-    (1..(new_array.length-1)).each do |i|
-        if new_array[0] != new_array[1]
-            return new_array[0]
-        elsif new_array[i] != new_array[i-1] && new_array[i] != new_array[i+1]
-            return new_array[i]
-        elsif new_array.last != new_array[new_array.length-1]
-            return new_array.last
-        else
-            return nil
-        end
-    end
+array=str.split""
+array_triples=[]
+moving_on_array=[]
+  if array[0]!=array[1]
+    array[0]
+  else
+    array[1..-1].each_cons(3) { |a| array_triples << a }
+    moving_on_array=array_triples.select {|x| x[0]!=x[1] && x[1]!=x[2]}
+      if moving_on_array.empty? == false
+         moving_on_array[0][1]
+      elsif array[-2]!=array[-1]
+         array[-1]
+      end
+  end
 end
