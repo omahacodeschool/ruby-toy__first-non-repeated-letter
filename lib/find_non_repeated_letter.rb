@@ -7,8 +7,13 @@
 # + "aabbaa" only has repeated letters (two pairs of 'a', and a pair of 'b'), and thus returns
 #   nil (since there does not exist a non-repeated letter)
 
-
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+letters = str.split("")
+ltrgroups = letters.chunk{|k| k}.map {|k, v| [k, v.length]}      
+final = ltrgroups.select{ |k, v| v == 1}  
+    if final.length == 0
+        nil
+    else
+        final.first[0]
+    end
 end
