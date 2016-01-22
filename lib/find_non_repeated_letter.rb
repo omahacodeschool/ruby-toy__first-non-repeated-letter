@@ -12,8 +12,8 @@ def find_first_non_repeated_letter(str)
   b = []
   i = 0
   while i < str.length 
-    if str[i] != str[i = i + 1]
-      ???????
-    else return true
+    until str[i] != str[i = i + 1] do
+        ????????
+    return true
   end
 end
