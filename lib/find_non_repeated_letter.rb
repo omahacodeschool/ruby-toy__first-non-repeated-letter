@@ -10,12 +10,13 @@
 
 def find_first_non_repeated_letter(str)
   str = str.split("")
-  str = [nil] + str + [nil]
   newarr = []
   str.each_index do |x|
 	  if str[x] != str[x-1] && str[x] != str[x+1]
 	  	newarr.push(str[x])
+	  elsif str.length == 1
+	  	newarr.push(str[x])
 	  end
 	end
-	newarr.shift
+	return newarr[0]
 end
