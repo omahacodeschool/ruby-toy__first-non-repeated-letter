@@ -9,6 +9,27 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  # Begin at the beginning.
+  i = 0
+  
+  while i < str.length
+  
+    # Is the next character different or nonexistent?
+  	if str[i] != str[i+1]
+  
+  	  # Is this the first character, or is the previous character different?
+  		if i == 0 || str[i] != str[i-1]
+  
+  		  # If so, this character wasn't repeated.
+  		  # Return the first time this happens.
+  			return str[i]
+  		end
+  	end
+  
+  	# If we're still here, go to the next character.
+    i += 1
+  end
+  
+  # If we got through that whole loop, everything repeats.
+  return nil
 end
