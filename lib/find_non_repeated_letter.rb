@@ -9,6 +9,8 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+	x = str.split(//) #start by splitting up the characters into single-letter substrings
+	h = Hash.new(0) #here I'm going to create a hash that matches the key (the letters) and the value (number of times that letter appears)
+	x.each{ |i| h[i] += 1 } #this each loop will populate the hash by increasing the value of each key when it occurs in the array
+	return h.key(1) #this will return the first key for which the value is '1'
 end
