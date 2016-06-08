@@ -9,6 +9,21 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+    #create a variable to add too
+    idx = 0
+    #continue running through the block until condition is met or the index reaches the string length
+    while idx < str.length
+        #check if each character is different than the next character
+        if str[idx] != str[idx+1]
+            #check if each character is different than the previous character or if there is one character
+            if str[idx] != str[idx-1] || idx == 0
+                #return the character if any
+                return str[idx]
+            end
+        end
+        #increment the index by one after each execution of the block
+        idx += 1
+    end
+    #if nothing was returned after the loop return nil
+    return nil
 end
