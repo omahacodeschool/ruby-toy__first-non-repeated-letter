@@ -1,0 +1,23 @@
+str = "aaaaga"
+word = str.split("")
+odd_man_out = ""
+if word.length > 1
+  word.each_index do |i|
+    if (word[i] != word[i+1] && word[i] != word[i-1])
+      odd_man_out = word[i]
+      break
+    end
+  end
+else 
+  odd_man_out = word[0]
+end
+
+puts odd_man_out
+
+
+
+
+
+
+
+
