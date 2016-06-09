@@ -9,6 +9,17 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  word = str.split("")
+  list = []
+  
+  if word.length > 1
+    word.each_index do |i|
+      if (word[i] != word[i+1] && word[i] != word[i-1])
+        list << word[i]
+      end
+    end
+  else 
+    list[0] = word[0]
+  end
+  return list[0]
 end
