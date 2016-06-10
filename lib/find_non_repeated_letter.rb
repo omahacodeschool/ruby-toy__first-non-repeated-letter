@@ -20,3 +20,10 @@ def find_first_non_repeated_letter(str)
 	end
 	return newarr[0]
 end
+#A nonrepeated letter will be unique compared to both characters around it. I began by converting the inputted string
+#to an array so it would be easier to manipulate. I wrote an if statement that compares each element in the array
+#to the elements next to it. I used the .each_index method to increment and decrement the indices of the elements
+#in the if statement. The unique elements are then pushed to a new array. I had to write an elsif to catch an array
+#with only a single element, since it wasn't pushing them to the new array. My guess is because a single-element array 
+#doesn't have surrounding elements for the if statement to compare it to. The function ends by returning the
+#first element of the new array, which would be the first unique element found.
