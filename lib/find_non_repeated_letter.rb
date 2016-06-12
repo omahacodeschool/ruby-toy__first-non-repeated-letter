@@ -10,5 +10,14 @@
 
 def find_first_non_repeated_letter(str)
   #write your method here
+  
+#Algorithmic Process
+
+#Convert each element in the string to a individual elements in an array preserving the order
+#Start with the frist element in the arr, scan to see if it repeats
+#If is does not - you have your answer
+#If it does repeat - move on to the second element and so on until one does not repeat
+  
+  
   return true
 end
