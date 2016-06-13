@@ -9,6 +9,30 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  
+  x = 0
+  y = 1
+  
+  
+  while x < str.length
+    
+  
+    if str[x] == str[y]
+      
+      x += 1
+      y += 1
+      
+    elsif 1 == str.length
+      return str[x]
+      
+    elsif str[y] == nil
+      return nil
+      
+    elsif str[y] != str[y + 1]
+      return str[y]
+    end
+   
+  end
+  
+  
 end
