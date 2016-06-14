@@ -9,15 +9,16 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
   
-#Algorithmic Process
-
-#Convert each element in the string to a individual elements in an array preserving the order
-#Start with the frist element in the arr, scan to see if it repeats
-#If is does not - you have your answer
-#If it does repeat - move on to the second element and so on until one does not repeat
+  new_array = str.chars.to_a
+  new_hash = {}
   
+  new_array.each do |x|
+    new_hash[x] = 0 if new_hash[x].nil?
+    new_hash[x] = new_hash[x] + 1
+  end
   
-  return true
+  first_nonrepeat = new_hash.key(1)
+  
+  return first_nonrepeat
 end
