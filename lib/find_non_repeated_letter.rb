@@ -9,6 +9,22 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  #Create array from string.
+  arr1 = str.split("")
+  
+  #Create new hash with default value of zero.
+  myhash = Hash.new 0
+  
+  #Loop through array and count instances.
+  arr1.each do |index|
+  	myhash[index] += 1
+  end
+  
+  #Use if-then code to return nil if no non-repeats, else return the first non-repeating element.
+  if myhash.values.min != 1
+  	nil
+  else
+  	first_occur = myhash.key(myhash.values.min)
+  end
+
 end
