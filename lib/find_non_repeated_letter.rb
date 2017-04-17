@@ -9,6 +9,10 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  str = str.chars
+  new_str = str.select { |char| str.count(char) <= 1 }
+  return new_str[0]
 end
+
+
+
