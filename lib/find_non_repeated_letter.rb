@@ -9,6 +9,14 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+  letters = str.split(//)
+
+  letters.each_with_index do |v, i|
+      next_letter = letters[i+1]
+      prev_letter = letters[i-1]
+      if !( prev_letter == v || next_letter == v )
+        return v
+      end
+    end
+
 end
