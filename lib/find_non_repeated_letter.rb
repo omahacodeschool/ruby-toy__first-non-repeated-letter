@@ -7,8 +7,15 @@
 # + "aabbaa" only has repeated letters (two pairs of 'a', and a pair of 'b'), and thus returns
 #   nil (since there does not exist a non-repeated letter)
 
-
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
+    array = str.to_s.split("")
+    i=0
+    if array.length==1 then return array[i]
+    end
+    while i<array.length
+        if array[i]==array[i+1] || array[i]==array[i-1]
+        else return array[i]
+        end
+    i= i+1
+    end
 end
